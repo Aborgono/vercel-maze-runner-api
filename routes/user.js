@@ -1,21 +1,20 @@
 const express = require('express')
 const router = require('express').Router()
+const data = {}
+data.employees = require ('../data/users.json')
 
-const database = 'Maze-Runner'
-const collection = 'users'
+// const userMethod = () => {
 
-export const userMethod = (req, res, db) => {
-    
-}
-use(database);
+    router.route("/users")
+        .get((req, res) => {
+            res.json(data.employees)
+        })
+        .post((req, res) => {
+            res.json({
+                "user": req.body,
+                "difficulty": req.body,
+                "score": req.body
+            })
+        })
 
-// router.post('/',async(req, res) => {
-//     const newUser = req.body;
-//     try {
-//         const addUser = await
-//     } catch (error) {
-        
-//     }
-// })
-
-module.exports = userMethod
+module.exports = router
