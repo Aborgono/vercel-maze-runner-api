@@ -1,13 +1,13 @@
 const express = require('express')
 const router = require('express').Router()
 const data = {}
-data.employees = require ('../data/users.json')
+data.users = require ('../data/users.json')
 
 // const userMethod = () => {
 
     router.route("/users")
         .get((req, res) => {
-            res.json(data.employees)
+            res.json(data.users)
         })
         .post((req, res) => {
             res.json({
