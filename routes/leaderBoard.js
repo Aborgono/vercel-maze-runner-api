@@ -2,12 +2,11 @@ const express = require('express')
 const router = express.Router()
 const bodyParser = require('body-parser')
 const data = {}
-data.users = require ('../data/users.json')
+data.leaderBoard = require ('../data/users.json')
 
     router.route("/")
-        .post((req, res) => {
-            const anonymousUser = req.body;
-            console.log("this is test", anonymousUser);
+        .get((req, res) => {
+            res.json(data.leaderBoard)
         })
 
 module.exports = router
