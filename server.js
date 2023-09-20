@@ -1,17 +1,16 @@
 const express = require ('express')
-const cors = require ('cors')
-// const { userMethod } = require('./routes/user')
-const user = require('./routes/user')
-// const mongoose = require ('mongoose')
 const app = express()
+const cors = require ('cors')
 const PORT = 8080
+// const mongoose = require ('mongoose')
 
+const userRoute = require('./routes/user')
+const bodyParser = require('body-parser')
 
 
 app.use(cors())
-app.use(express.json())
-
-app.use('/', user)
+app.use(bodyParser.json())
+app.use('/users', userRoute)
 
 app.listen(PORT, () => {
     console.log(`App is running on ${PORT}`);
