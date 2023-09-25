@@ -1,6 +1,7 @@
 const { MongoClient } = require("mongodb");
+require('dotenv').config();
 
-const uri = "mongodb+srv://aborgono:QNPLyV9v3J9rWoLp@cluster0.h9wnb1f.mongodb.net/";
+const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri);
 
 let coll; // Collection reference
