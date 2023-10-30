@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { connectToDatabase, closeDatabaseConnection, insertUser } = require('../mongodb');
+const { connectToDatabase, closeDatabaseConnection, insertUser } = require('../mongoDBConfig/mongodb');
 
 router.post("/", async (req, res) => {
     try {
