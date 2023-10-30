@@ -8,7 +8,11 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
+        "src": "/users",
+        "dest": "index.js"
+      },
+      {
+        "src": "/leaderBoard",
         "dest": "index.js"
       }
     ]
