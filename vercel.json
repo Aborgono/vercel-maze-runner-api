@@ -1,6 +1,7 @@
 {
   "routes": [
     { "src": "/", "dest": "index.js" },
-    { "src": "/users", "dest": "./routes/user.js" }
+    { "src": "/users", "dest": "./routes/user.js" },
+    { "src": "/leaderBoard", "dest": "./routes/leaderBoard.js" }
   ]
 }
