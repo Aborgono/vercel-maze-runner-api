@@ -22,4 +22,12 @@ app.get('/', (req, res) => {
     res.send('Hey this is my API running 🥳')
   })
 
+app.get('/users', (req, res) => {
+    res.send('Users route');
+  });
+  
+app.get('/leaderBoard', (req, res) => {
+    res.send('Leaderboard route');
+  });
+
 module.exports = app
