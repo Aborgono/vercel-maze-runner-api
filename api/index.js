@@ -5,8 +5,8 @@ const cors = require ('cors')
 const PORT = 8080
 // const mongoose = require ('mongoose')
 
-const userRoute = require('./routes/user')
-const leaderBoardRoute = require('./routes/leaderBoard')
+const userRoute = require('../routes/user')
+const leaderBoardRoute = require('../routes/leaderBoard')
 const bodyParser = require('body-parser')
 
 
