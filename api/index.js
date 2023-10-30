@@ -11,14 +11,14 @@ const userRoute = require('../routes/user')
 const leaderBoardRoute = require('../routes/leaderBoard')
 const bodyParser = require('body-parser')
 
-app.listen(PORT, () => {
-    console.log(`App is running on ${PORT}`);
-})
-
 
 app.use(cors())
 app.use(bodyParser.json())
 app.use('/users', userRoute)
 app.use('/leaderBoard', leaderBoardRoute)
+
+app.listen(PORT, () => {
+    console.log(`App is running on ${PORT}`);
+})
 
 module.exports = app
