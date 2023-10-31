@@ -27,7 +27,7 @@ app.get('/users', (req, res) => {
   });
   
 app.get('/leaderBoard', (req, res) => {
-    res.send('Leaderboard route');
+    res.send({leaderBoardRoute});
   });
 
 module.exports = app
