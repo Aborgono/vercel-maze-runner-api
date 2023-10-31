@@ -7,6 +7,14 @@
       {
         "source": "/",
         "destination": "/api"
+      },
+      {
+        "source": "/users",
+        "destination": "/api/users.s"
+      },
+      {
+        "source": "/leaderBoard",
+        "destination": "/api/leaderBoard.js"
       }
   ]
 }
