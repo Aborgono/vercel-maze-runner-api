@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 
 
 // router.post("/", async (req, res) => {
-app.post("/", async (req, res) => {
+app.post("/users", async (req, res) => {
   try {
       await connectToDatabase()
       const anonymousUser = req.body;

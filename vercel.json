@@ -10,11 +10,11 @@
       },
       {
         "source": "/users",
-        "destination": "/api/users.s"
+        "destination": "/api/index.js"
       },
       {
         "source": "/leaderBoard",
-        "destination": "/api/leaderBoard.js"
+        "destination": "/api/index.js"
       }
   ]
 }
