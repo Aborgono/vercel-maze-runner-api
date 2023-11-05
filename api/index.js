@@ -1,7 +1,4 @@
-// {
-//   "source": "/api/(.*)",
-//   "destination": "/api"
-// },
+
 
 const express = require ('express')
 const app = express()
@@ -13,8 +10,8 @@ app.listen(PORT, () => {
     console.log(`App is running on ${PORT}`);
 })
 
-const userRoute = require('./user')
-const leaderBoardRoute = require('./leaderBoard')
+const userRoute = require('../pages/user')
+const leaderBoardRoute = require('../pages/leaderBoard')
 const bodyParser = require('body-parser')
 
 
