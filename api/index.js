@@ -31,7 +31,8 @@ app.get('/users', (req, res) => {
     res.send('Users route');
   });
 
-  router.get("/leaderBoard", async (req, res) => {
+  // router.get("/leaderBoard", async (req, res) => {
+  app.get("/leaderBoard", async (req, res) => {
     try {
         // Connect to the database
         await connectToDatabase(client);
