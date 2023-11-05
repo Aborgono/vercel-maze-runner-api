@@ -10,8 +10,8 @@ app.listen(PORT, () => {
     console.log(`App is running on ${PORT}`);
 })
 
-const userRoute = require('../pages/user')
-const leaderBoardRoute = require('../pages/leaderBoard')
+const userRoute = require('../user')
+const leaderBoardRoute = require('../leaderBoard')
 const bodyParser = require('body-parser')
 
 
