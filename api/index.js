@@ -2,11 +2,9 @@
 
 const express = require ('express')
 const app = express()
-// const cors = require ('cors')
+const cors = require ('cors')
 const PORT = 8080
-// const mongoose = require ('mongoose')
 
-// const { connectToDatabase, closeDatabaseConnection, client, insertUser } = require('../mongoDBConfig/mongodb');
 
 
 
@@ -19,7 +17,7 @@ const leaderBoardRoute = require('./leaderBoard.js')
 const bodyParser = require('body-parser')
 
 
-// app.use(cors())
+app.use(cors())
 app.use(bodyParser.json())
 app.use('/api/users', userRoute)
 app.use('/api/leaderboard', leaderBoardRoute)
