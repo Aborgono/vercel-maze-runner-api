@@ -15,73 +15,20 @@ app.listen(PORT, () => {
 })
 
 const userRoute = require('./user.js')
-// const leaderBoardRoute = require('../pages/leaderBoard.js')
+const leaderBoardRoute = require('./leaderBoard.js')
 const bodyParser = require('body-parser')
 
 
 // app.use(cors())
 app.use(bodyParser.json())
 app.use('/api/users', userRoute)
-// app.use('/api/leaderBoard', leaderBoardRoute)
+app.use('/api/leaderboard', leaderBoardRoute)
 
 
 
 app.get('/', (req, res) => {
     res.send('Hey this is my API running 🥳')
   })
-
-// app.get('/api/leaderboard', (req, res) => {
-//     res.send('Leaderboard route');
-//   });
-
-app.get("/api/leaderboard", async (req, res) => {
-  try {
-      // Connect to the database
-      await connectToDatabase(client);
-      const db = client.db("Maze-Runner");
-      const coll = db.collection("users");
-
-      // Get user data by finding all users
-      const cursor = await coll.find();
-      const userData = await cursor.toArray();
-
-      res.json(userData);
-  } catch (error) {
-      console.error("Error retrieving user data:", error);
-      res.status(500).json({ error: "Internal server error" });
-  } finally {
-      // Close the database connection
-      await closeDatabaseConnection();
-  }
-});  
-
-// app.get('/api/users', (req, res) => {
-//   res.send('Users route');
-// });
-
-
-// router.post("/", async (req, res) => {
-// app.post("/api/users", async (req, res) => {
-//   try {
-//       await connectToDatabase()
-//       const anonymousUser = req.body;
-//       console.log("Received user data", anonymousUser);
-
-//       // Insert the user into the database using the function from db.js
-//       const insertedId = await insertUser(anonymousUser);
-
-//       res.json({ message: "User inserted successfully", insertedId });
-//   } catch (error) {
-//       console.error("Error inserting user:", error);
-//       res.status(500).json({ error: "Internal server error" });
-//   } finally {
-//       await closeDatabaseConnection();
-//   }
-// });
-
-  // router.get("/leaderBoard", async (req, res) => {
-
-
 
 
 module.exports = app
