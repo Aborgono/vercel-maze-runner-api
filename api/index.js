@@ -15,14 +15,14 @@ app.listen(PORT, () => {
 })
 
 const userRoute = require('../pages/user.js')
-const leaderBoardRoute = require('../pages/leaderBoard.js')
+// const leaderBoardRoute = require('../pages/leaderBoard.js')
 const bodyParser = require('body-parser')
 
 
 // app.use(cors())
 app.use(bodyParser.json())
 app.use('/api/users', userRoute)
-app.use('/api/leaderBoard', leaderBoardRoute)
+// app.use('/api/leaderBoard', leaderBoardRoute)
 
 app.get('/', (req, res) => {
     res.send('Hey this is my API running 🥳')
