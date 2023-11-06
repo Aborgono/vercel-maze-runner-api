@@ -14,12 +14,12 @@ app.listen(PORT, () => {
     console.log(`App is running on ${PORT}`);
 })
 
-const userRoute = require('../pages/user')
-const leaderBoardRoute = require('../pages/leaderBoard')
+const userRoute = require('../pages/user.js')
+const leaderBoardRoute = require('../pages/leaderBoard.js')
 const bodyParser = require('body-parser')
 
 
-app.use(cors())
+// app.use(cors())
 app.use(bodyParser.json())
 app.use('/users', userRoute)
 app.use('/leaderBoard', leaderBoardRoute)
@@ -28,9 +28,13 @@ app.get('/', (req, res) => {
     res.send('Hey this is my API running 🥳')
   })
 
-// router.get('/users', (req, res) => {
-//     res.send('Users route');
-//   });
+app.get('/leaderboard', (req, res) => {
+    res.send('Leaderboard route');
+  });
+
+app.get('/users', (req, res) => {
+    res.send('Users route');
+  });
 
 
 // router.post("/", async (req, res) => {
@@ -74,8 +78,6 @@ app.get('/', (req, res) => {
 //   }
 // });  
 
-// router.get('/', (req, res) => {
-//     res.send('Leaderboard route');
-//   });
+
 
 module.exports = app
