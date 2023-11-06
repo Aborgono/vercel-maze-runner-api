@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const { connectToDatabase, closeDatabaseConnection, insertUser } = require('../mongoDBConfig/mongodb');
 
+app.get('/', (req, res) => {
+    res.send('Users route');
+  });
+
 router.post("/", async (req, res) => {
     try {
         await connectToDatabase()
