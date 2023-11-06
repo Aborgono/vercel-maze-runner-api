@@ -53,7 +53,7 @@ app.post("/users", async (req, res) => {
 });
 
   // router.get("/leaderBoard", async (req, res) => {
-app.get("/leaderBoard", async (req, res) => {
+app.get("api/leaderBoard", async (req, res) => {
   try {
       // Connect to the database
       await connectToDatabase(client);
