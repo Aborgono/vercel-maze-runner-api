@@ -28,11 +28,11 @@ app.get('/', (req, res) => {
     res.send('Hey this is my API running 🥳')
   })
 
-app.get('/leaderboard', (req, res) => {
+app.get('/api/leaderboard', (req, res) => {
     res.send('Leaderboard route');
   });
 
-app.get('/users', (req, res) => {
+app.get('/api/users', (req, res) => {
     res.send('Users route');
   });
 
