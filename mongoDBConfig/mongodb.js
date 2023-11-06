@@ -7,7 +7,9 @@ const client = new MongoClient(uri);
 let coll; // Collection reference
 
 async function connectToDatabase() {
+    console.log("A", uri)
     try {
+        console.log("B")
         await client.connect();
         console.log("Connected to MongoDB");
         const db = client.db("Maze-Runner");
