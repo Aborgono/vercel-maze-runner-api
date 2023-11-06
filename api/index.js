@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 
 
 // router.post("/", async (req, res) => {
-app.post("/users", async (req, res) => {
+app.post("/api/users", async (req, res) => {
   try {
       await connectToDatabase()
       const anonymousUser = req.body;
@@ -53,7 +53,7 @@ app.post("/users", async (req, res) => {
 });
 
   // router.get("/leaderBoard", async (req, res) => {
-app.get("api/leaderBoard", async (req, res) => {
+app.get("api/leaderboard", async (req, res) => {
   try {
       // Connect to the database
       await connectToDatabase(client);
