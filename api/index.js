@@ -21,8 +21,8 @@ const bodyParser = require('body-parser')
 
 // app.use(cors())
 app.use(bodyParser.json())
-app.use('/users', userRoute)
-app.use('/leaderBoard', leaderBoardRoute)
+app.use('/api/users', userRoute)
+app.use('/api/leaderBoard', leaderBoardRoute)
 
 app.get('/', (req, res) => {
     res.send('Hey this is my API running 🥳')
